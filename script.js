@@ -1,3 +1,9 @@
+/**
+ * The function generates a link element based on user input, copies it to the
+ * clipboard, and displays success or failure notifications.
+ *
+ * @returns The function does not explicitly return a value.
+ */
 async function generateLink() {
     // Get input values
     const urlLink = document.getElementById('urlLink').value;
@@ -61,6 +67,13 @@ async function generateLink() {
     document.body.removeChild(tempContainer);
 }
 
+/**
+ * The function sets a failure notification by adding the 'failure' class to a notification element and
+ * then displaying and hiding the notification.
+ *
+ * @param text - The text parameter is a string that represents the failure notification message that
+ * you want to display.
+ */
 function setFailureNotification(text) {
     const notificationElement = this.getNotificationElement(text);
 
@@ -70,6 +83,13 @@ function setFailureNotification(text) {
     this.displayAndHideNotification();
 }
 
+/**
+ * The function sets a success notification by adding the 'success' class to a notification element and
+ * displaying it.
+ *
+ * @param text - The text parameter is a string that represents the message or content of the success
+ * notification.
+ */
 function setSuccessNotification(text) {
     const notificationElement = this.getNotificationElement(text);
 
@@ -79,6 +99,9 @@ function setSuccessNotification(text) {
     this.displayAndHideNotification();
 }
 
+/**
+ * The function displays a notification element and then hides it after 3 seconds.
+ */
 function displayAndHideNotification() {
     const notificationElement = this.getNotificationElement();
 
@@ -89,6 +112,13 @@ function displayAndHideNotification() {
     }, 3000);
 }
 
+/**
+ * The function returns the notification element with the given text.
+ *
+ * @param [text] - The `text` parameter is a string that represents the text content that you want to
+ * set for the notification element.
+ * @returns the notification element with the id 'notification'.
+ */
 function getNotificationElement(text = '') {
     const notificationElement = document.getElementById('notification');
 
@@ -99,11 +129,24 @@ function getNotificationElement(text = '') {
     return notificationElement;
 }
 
+/**
+ * The function clears the values of two input fields with the IDs 'textToDisplay' and
+ * 'urlLink'.
+ */
 function clearInputs() {
     document.getElementById('textToDisplay').value = '';
     document.getElementById('urlLink').value = '';
 }
 
+/**
+ * The function uses the `fetch` API to retrieve the HTML content of a given URL,
+ * parses the HTML to extract the title element, and returns the text content of the title element as
+ * the URL's title.
+ *
+ * @param url - The `url` parameter is a string that represents the URL of the webpage whose title we
+ * want to retrieve.
+ * @returns the title of the webpage specified by the URL.
+ */
 async function convertUrlToTitle(url) {
     let urlTitle;
 
