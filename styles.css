@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+
+/* Reset Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    /* text-decoration: none; */
+    color: blue;
+}
+
+a:hover {
+    color: black;
+}
+
+figure img {
+    vertical-align: top;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+p,
+li {
+    /* font-size: 18px; */
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* Utilities */
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mt-40 {
+    margin-top: 40px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+.mt-60 {
+    margin-top: 60px;
+}
+.mt-70 {
+    margin-top: 70px;
+}
+.mt-80 {
+    margin-top: 80px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Navbar */
+
+.top-header {
+    background-color: white;
+    /* box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2); */
+}
+
+.navbar {
+    position: relative;
+    z-index: 10;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 10px;
+}
+
+.logo {
+    font-size: 25px;
+    color: black;
+    font-weight: 700;
+    letter-spacing: -1px;
+    height: 100%;
+    font-style: italic;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-icons {
+    float: right;
+}
+
+.social-media-icon {
+    display: inline-block;
+}
+
+.social-media-icon img {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* Content */
+
+.content {
+    height: calc(100vh - 50px);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top: 120px;
+}
+
+input {
+    width: 300px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+button.submit {
+    width: 300px;
+    height: 28px;
+    background-color: rgb(13, 110, 253);
+    border: none;
+    line-height: 28px;
+    vertical-align: middle;
+    border-radius: 5px;
+    color: white;
+}
+
+#notification {
+    position: absolute;
+    top: 20px;
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    display: none;
+}
+
+.notification-active {
+    display: block !important;
+}
+
+.success {
+    background: rgb(2, 168, 2);
+}
+
+.failure {
+    background: rgb(245, 6, 6);
+}

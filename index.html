@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="shortcut icon" href="assets/images/title-img.png" />
+        <title>Link Generator</title>
+
+        <meta name="author" content="Gowthaman Thirunavukkarasu" />
+        <meta
+            name="description"
+            content="Generates a link from the given URL with its title of the URL or given optional text and copies that to clipboard."
+        />
+
+        <meta property="og:image" content="" />
+        <meta
+            property="og:description"
+            content="Generates a link from the given URL with its title of the URL or given optional text and copies that to clipboard."
+        />
+        <meta property="og:title" content="Link Generator" />
+        <meta
+            property="og:url"
+            content="https://gowthamant.github.io/link-generator/"
+        />
+        <meta property="og:type" content="Website" />
+
+        <!-- Css -->
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Js -->
+        <script src="script.js" async></script>
+    </head>
+
+    <body>
+        <header class="top-header">
+            <div class="navbar clearfix">
+                <a href="https://gowthamant.in/" class="logo"> GT </a>
+                <div class="social-icons">
+                    <a
+                        href="mailto:happygowthaman@gmail.com"
+                        class="social-media-icon"
+                        target="_blank"
+                        title="Write an EMail"
+                    >
+                        <img
+                            src="assets/icons/icons8-mail-48.png"
+                            alt="Gmail Icon"
+                            height="30"
+                            width="30"
+                        />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/gowthaman-thirunavukkarasu/"
+                        class="social-media-icon"
+                        target="_blank"
+                        title="Connect in LinkedIn"
+                    >
+                        <img
+                            src="assets/icons/icons8-linkedin-30.png"
+                            alt="LinkedIn Icon"
+                            height="30"
+                            width="30"
+                        />
+                    </a>
+                    <a
+                        href="https://github.com/GowthamanT"
+                        class="social-media-icon"
+                        target="_blank"
+                        title="View Projects"
+                    >
+                        <img
+                            src="assets/icons/icons8-github-30.png"
+                            alt="Github Icon"
+                            height="30"
+                            width="30"
+                        />
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div id="notification"></div>
+
+                <div class="container">
+                    <h1 class="title">Link Generator</h1>
+
+                    <input type="text" id="urlLink" placeholder="URL link" />
+                    <input
+                        type="text"
+                        id="textToDisplay"
+                        placeholder="Optional Text"
+                    />
+
+                    <button onclick="generateLink()" class="submit">
+                        Generate Link
+                    </button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
