@@ -20,19 +20,15 @@ async function generateLink() {
 
     const urlTitle = await this.convertUrlToTitle(urlLink);
 
+    if (!textToDisplay && !urlTitle) {
+        return;
+    }
+
     // Create link element
     const linkElement = document.createElement('a');
     linkElement.href = urlLink;
 
-    if (textToDisplay) {
-        linkElement.textContent = textToDisplay;
-    } else if (urlTitle) {
-        linkElement.textContent = urlTitle;
-    } else {
-        this.setFailureNotification('Failed to generate link.');
-
-        return;
-    }
+    linkElement.textContent = textToDisplay ? textToDisplay : urlTitle;
 
     // Create a temporary container
     const tempContainer = document.createElement('div');
@@ -109,7 +105,7 @@ function displayAndHideNotification() {
 
     setTimeout(() => {
         notificationElement.classList.remove('notification-active');
-    }, 3000);
+    }, 5000);
 }
 
 /**
@@ -165,6 +161,10 @@ async function convertUrlToTitle(url) {
         })
         .catch((error) => {
             console.error('Error fetching page:', error);
+
+            this.setFailureNotification(
+                `Failed to generate link, Error: "${error}". See the web console for more details.`
+            );
         });
 
     return urlTitle;

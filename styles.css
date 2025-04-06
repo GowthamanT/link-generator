@@ -166,6 +166,7 @@ button.submit {
     vertical-align: middle;
     border-radius: 5px;
     color: white;
+    cursor: pointer;
 }
 
 #notification {
